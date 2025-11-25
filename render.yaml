@@ -1,0 +1,25 @@
+services:
+  # Static site service
+  - type: web
+    name: agentic-web-workshop
+    env: static
+    rootDir: ./
+    buildCommand: ""
+    staticPublishPath: ./
+    headers:
+      - path: /*
+        name: X-Frame-Options
+        value: DENY
+      - path: /*
+        name: X-Content-Type-Options
+        value: nosniff
+      - path: /*
+        name: Referrer-Policy
+        value: strict-origin-when-cross-origin
+      - path: /*
+        name: Content-Security-Policy
+        value: "default-src 'self'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://fonts.gstatic.com; font-src 'self' https://fonts.gstatic.com; img-src 'self' data: https:; connect-src 'self' https://forms.gle;"
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
