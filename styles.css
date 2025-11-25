@@ -1,0 +1,840 @@
+/* Corporate Executive Education Landing Page */
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+    background-color: #ffffff;
+    font-weight: 400;
+}
+
+h1, h2, h3, h4 {
+    font-family: 'Merriweather', serif;
+    font-weight: 700;
+    line-height: 1.2;
+    color: #1a252f;
+}
+
+p {
+    margin-bottom: 1rem;
+    color: #4a5568;
+    line-height: 1.7;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 24px;
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #1a365d 0%, #2c5282 50%, #2a4365 100%);
+    color: #ffffff;
+    padding: 120px 0 80px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.hero::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grid" width="10" height="10" patternUnits="userSpaceOnUse"><path d="M 10 0 L 0 0 0 10" fill="none" stroke="rgba(255,255,255,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23grid)"/></svg>');
+    background-size: 20px 20px;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-content h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    line-height: 1.1;
+    color: #ffffff;
+}
+
+.hero-content h1 span {
+    color: #63b3ed;
+    font-weight: 600;
+}
+
+.hero-content h2 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.5rem;
+    font-weight: 500;
+    margin-bottom: 2rem;
+    color: #e2e8f0;
+}
+
+.hero-description {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    max-width: 600px;
+    margin: 0 auto 3rem;
+    color: #cbd5e0;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+.cta-section {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.cta-button {
+    padding: 16px 32px;
+    border: none;
+    border-radius: 8px;
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
+    text-transform: none;
+    letter-spacing: 0.025em;
+}
+
+.cta-button.primary {
+    background: #ffffff;
+    color: #2c5282;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.15);
+}
+
+.cta-button.primary:hover {
+    background: #f7fafc;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.2);
+}
+
+.cta-button.secondary {
+    background: transparent;
+    color: #ffffff;
+    border: 2px solid #ffffff;
+}
+
+.cta-button.secondary:hover {
+    background: rgba(255, 255, 255, 0.1);
+    border-color: #e2e8f0;
+}
+
+.cta-button.large {
+    padding: 20px 40px;
+    font-size: 1.125rem;
+    font-weight: 700;
+}
+
+/* Common section styles */
+section {
+    padding: 80px 0;
+}
+
+section:nth-child(even) {
+    background: #f8fafc;
+}
+
+.section-header {
+    text-align: center;
+    margin-bottom: 4rem;
+}
+
+.section-header h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.section-header .divider {
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, #2c5282, #3182ce);
+    margin: 0 auto 2rem;
+    border-radius: 2px;
+}
+
+.section-subtitle {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    max-width: 650px;
+    margin: 0 auto;
+    color: #4a5568;
+    font-weight: 400;
+    line-height: 1.6;
+}
+
+/* Concept Section */
+.concept-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.concept {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2c5282;
+    transition: all 0.2s ease;
+}
+
+.concept:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.concept h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a252f;
+    font-weight: 600;
+}
+
+.concept p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Impact Section */
+.impact-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    margin: 3rem 0;
+}
+
+.impact-stat {
+    text-align: center;
+    background: #ffffff;
+    padding: 2rem 1.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-bottom: 4px solid #2c5282;
+    transition: all 0.2s ease;
+}
+
+.impact-stat:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.stat-number {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: #2c5282;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #4a5568;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.impact-note {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #4a5568;
+    font-weight: 500;
+    max-width: 600px;
+    margin: 0 auto;
+    font-style: italic;
+}
+
+/* Agenda Section */
+.agenda-timeline {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.agenda-module {
+    background: #ffffff;
+    border-radius: 12px;
+    margin-bottom: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+    overflow: hidden;
+    border: 1px solid #e2e8f0;
+}
+
+.module-header {
+    background: linear-gradient(135deg, #2c5282 0%, #3182ce 100%);
+    color: #ffffff;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.module-time {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    font-weight: 700;
+    background: rgba(255, 255, 255, 0.15);
+    padding: 6px 12px;
+    border-radius: 6px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.module-header h3 {
+    color: #ffffff;
+    font-size: 1.5rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+.module-content {
+    padding: 2rem;
+}
+
+.module-content h4 {
+    font-size: 1.125rem;
+    color: #2c5282;
+    margin-bottom: 0.75rem;
+    font-weight: 600;
+}
+
+.module-content p {
+    color: #4a5568;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    line-height: 1.6;
+}
+
+.module-content p:last-child {
+    margin-bottom: 0;
+}
+
+/* Business Impact Section */
+.impact-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.impact-card {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border: 1px solid #e2e8f0;
+    transition: all 0.2s ease;
+}
+
+.impact-card:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-1px);
+}
+
+.card-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.card-header h3 {
+    font-size: 1.5rem;
+    color: #1a252f;
+    margin: 0;
+    font-weight: 600;
+}
+
+.industry-tag {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.75rem;
+    font-weight: 600;
+    background: #edf2f7;
+    color: #4a5568;
+    padding: 4px 10px;
+    border-radius: 4px;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.metrics {
+    display: flex;
+    gap: 2rem;
+    margin-bottom: 1.5rem;
+    flex-wrap: wrap;
+}
+
+.metric {
+    text-align: center;
+}
+
+.metric-value {
+    display: block;
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    font-weight: 700;
+    color: #2c5282;
+    margin-bottom: 0.25rem;
+}
+
+.metric-label {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: #4a5568;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.case-summary {
+    color: #4a5568;
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Audience Section */
+.audience-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.audience-group {
+    background: #ffffff;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2c5282;
+    transition: all 0.2s ease;
+}
+
+.audience-group:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.audience-group h3 {
+    font-size: 1.375rem;
+    margin-bottom: 1rem;
+    color: #1a252f;
+    font-weight: 600;
+}
+
+.audience-group p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
+/* Urgency Section */
+.quote-container {
+    text-align: center;
+    margin: 3rem auto;
+    max-width: 700px;
+}
+
+.quote-container blockquote {
+    font-family: 'Merriweather', serif;
+    font-size: 2rem;
+    font-weight: 600;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #1e293b;
+    position: relative;
+}
+
+.quote-container cite {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #4a5568;
+    font-style: normal;
+    font-weight: 500;
+}
+
+/* Urgency Section */
+.urgency {
+    background: #f8fafc;
+}
+
+.urgency .quote-container blockquote {
+    color: #1a252f !important;
+    font-size: 1.75rem;
+    line-height: 1.4;
+}
+
+.urgency .quote-container cite {
+    color: #4a5568;
+}
+
+.urgency-message {
+    text-align: center;
+    font-family: 'Inter', sans-serif;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #2c3e50;
+    max-width: 700px;
+    margin: 2rem auto 0;
+    font-weight: 500;
+}
+
+/* Strategic Imperative Section */
+.strategic-imperative {
+    background: linear-gradient(135deg, #1e293b 0%, #334155 100%);
+    color: #ffffff;
+    padding: 100px 0;
+}
+
+.imperative-content {
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.strategic-imperative h2 {
+    color: #ffffff;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+    font-weight: 700;
+}
+
+.quote-container {
+    margin-bottom: 3rem;
+    padding: 0 2rem;
+}
+
+.quote-container blockquote {
+    font-family: 'Merriweather', serif;
+    font-size: 1.875rem;
+    font-weight: 300;
+    font-style: italic;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+    color: #f1f5f9;
+    position: relative;
+}
+
+
+.quote-container cite {
+    font-family: 'Inter', sans-serif;
+    font-size: 1rem;
+    color: #94a3b8;
+    font-style: normal;
+    font-weight: 500;
+}
+
+.strategic-imperative p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: #cbd5e1;
+    margin-bottom: 0;
+}
+
+/* Final CTA Section */
+.final-cta {
+    background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);
+    color: #ffffff;
+    padding: 80px 0;
+    text-align: center;
+}
+
+.cta-content h2 {
+    color: #ffffff;
+    font-size: 2.25rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.cta-content p {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #cbd5e1;
+    margin-bottom: 2rem;
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.cta-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+}
+
+.benefits {
+    font-family: 'Inter', sans-serif;
+    font-size: 0.875rem;
+    color: #94a3b8;
+    margin-top: 1rem;
+    text-align: left;
+}
+
+/* Site Footer */
+.site-footer {
+    background: #0f172a;
+    color: #ffffff;
+    padding: 40px 0 30px;
+    border-top: 1px solid #1e293b;
+}
+
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.footer-brand h3 {
+    font-family: 'Inter', sans-serif;
+    font-size: 1.125rem;
+    color: #ffffff;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+}
+
+.footer-brand p {
+    font-family: 'Inter', sans-serif;
+    color: #94a3b8;
+    font-size: 0.875rem;
+    margin-bottom: 0;
+}
+
+.footer-contact {
+    font-family: 'Inter', sans-serif;
+}
+
+.footer-contact a {
+    color: #3b82f6;
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.footer-contact a:hover {
+    color: #60a5fa;
+}
+
+.footer-bottom {
+    padding-top: 1.5rem;
+    border-top: 1px solid #1e293b;
+    text-align: center;
+}
+
+.footer-bottom p {
+    font-family: 'Inter', sans-serif;
+    color: #64748b;
+    font-size: 0.75rem;
+    margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 968px) {
+    .hero-content h1 {
+        font-size: 2.75rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.5rem;
+    }
+
+    .workshop-details {
+        gap: 1.5rem;
+    }
+
+    .outcomes-grid {
+        grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+        gap: 1.5rem;
+    }
+
+    .impact-grid {
+        grid-template-columns: 1fr;
+        gap: 1.5rem;
+    }
+
+    .audience-composition {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .footer-content {
+        grid-template-columns: 1fr;
+        gap: 2rem;
+    }
+
+    .metrics {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 640px) {
+    .container {
+        padding: 0 16px;
+    }
+
+    section {
+        padding: 60px 0;
+    }
+
+    .hero {
+        padding: 80px 0 60px;
+    }
+
+    .hero-content h1 {
+        font-size: 2.25rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.25rem;
+    }
+
+    .workshop-details {
+        flex-direction: column;
+        align-items: center;
+        gap: 1rem;
+    }
+
+    .cta-section {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cta-button {
+        width: 100%;
+        max-width: 280px;
+    }
+
+    .section-header h2 {
+        font-size: 2rem;
+    }
+
+    .outcomes-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .agenda-module {
+        margin-bottom: 1.5rem;
+    }
+
+    .module-header {
+        padding: 1.25rem 1.5rem;
+    }
+
+    .module-content {
+        padding: 1.5rem;
+    }
+
+    .module-header h3 {
+        font-size: 1.25rem;
+    }
+
+    .card-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .metrics {
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .metric-value {
+        font-size: 1.75rem;
+    }
+
+    .role-categories {
+        grid-template-columns: 1fr;
+    }
+
+    .industry-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .quote-container blockquote {
+        font-size: 1.5rem;
+    }
+
+    .strategic-imperative h2 {
+        font-size: 2rem;
+    }
+
+    .registration-cta {
+        padding: 60px 0;
+    }
+
+    .registration-cta h2 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .hero-content h1 {
+        font-size: 1.875rem;
+    }
+
+    .hero-content h2 {
+        font-size: 1.125rem;
+    }
+
+    .hero-description {
+        font-size: 1rem;
+    }
+
+    .section-header h2 {
+        font-size: 1.75rem;
+    }
+
+    .outcome {
+        padding: 2rem 1.5rem;
+    }
+
+    .impact-card {
+        padding: 1.5rem;
+    }
+
+    .module-header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.75rem;
+    }
+
+    .quote-container {
+        padding: 0 1rem;
+    }
+
+    .quote-container blockquote {
+        font-size: 1.25rem;
+    }
+}
