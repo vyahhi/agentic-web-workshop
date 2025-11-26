@@ -87,18 +87,32 @@ p {
     display: flex;
     justify-content: center;
     gap: 1.5rem;
-    margin-bottom: 2rem;
+    margin-top: 2rem;
     flex-wrap: wrap;
 }
 
 .schedule-item {
-    color: #cbd5e0;
-    padding: 4px 0;
+    color: #e2e8f0;
+    padding: 0.25rem 0;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
-    opacity: 0.9;
-    font-style: italic;
+    opacity: 0.95;
+    position: relative;
+    transition: opacity 0.2s ease;
+}
+
+.schedule-item::before {
+    content: '✦';
+    color: #63b3ed;
+    margin-right: 0.5rem;
+    font-style: normal;
+    font-size: 0.875rem;
+}
+
+.schedule-item:hover {
+    opacity: 1;
+    color: #ffffff;
 }
 
 .hero-description {
@@ -630,12 +644,6 @@ section:nth-child(even) {
     border-radius: 6px;
     border-left: 3px solid #3b82f6;
     backdrop-filter: blur(10px);
-    transition: all 0.2s ease;
-}
-
-.benefit-item:hover {
-    background: rgba(255, 255, 255, 0.1);
-    transform: translateX(2px);
 }
 
 /* Site Footer */
