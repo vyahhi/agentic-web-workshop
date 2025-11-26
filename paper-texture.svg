@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" width="800" height="600">
+  <defs>
+    <!-- Subtle paper texture pattern -->
+    <filter id="paper">
+      <feTurbulence baseFrequency="0.04" numOctaves="3" result="noise" seed="2"/>
+      <feDiffuseLighting in="noise" lighting-color="white" surfaceScale="1">
+        <feDistantLight azimuth="45" elevation="60"/>
+      </feDiffuseLighting>
+    </filter>
+
+    <!-- Faint lines pattern -->
+    <pattern id="lines" width="100%" height="100%" patternUnits="userSpaceOnUse">
+      <rect width="100%" height="100%" fill="none" stroke="rgba(100,116,139,0.03)" stroke-width="0.5"/>
+      <line x1="0" y1="0" x2="100%" y2="0" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="50" x2="100%" y2="50" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="100" x2="100%" y2="100" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="150" x2="100%" y2="150" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="200" x2="100%" y2="200" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="250" x2="100%" y2="250" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="300" x2="100%" y2="300" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="350" x2="100%" y2="350" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="400" x2="100%" y2="400" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="450" x2="100%" y2="450" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="500" x2="100%" y2="500" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+      <line x1="0" y1="550" x2="100%" y2="550" stroke="rgba(100,116,139,0.02)" stroke-width="0.3"/>
+    </pattern>
+
+    <!-- Subtle coffee stain marks -->
+    <radialGradient id="stain">
+      <stop offset="0%" style="stop-color:#f4f1e8;stop-opacity:0.05" />
+      <stop offset="100%" style="stop-color:#f4f1e8;stop-opacity:0" />
+    </radialGradient>
+  </defs>
+
+  <!-- Base paper background -->
+  <rect width="100%" height="100%" fill="#fafaf9" filter="url(#paper)"/>
+
+  <!-- Faint lined paper effect -->
+  <rect width="100%" height="100%" fill="url(#lines)"/>
+
+  <!-- Very subtle texture overlay -->
+  <g opacity="0.3">
+    <ellipse cx="120" cy="450" rx="80" ry="60" fill="url(#stain)"/>
+    <ellipse cx="650" cy="150" rx="60" ry="45" fill="url(#stain)"/>
+    <ellipse cx="700" cy="500" rx="40" ry="35" fill="url(#stain)"/>
+  </g>
+
+  <!-- Watermark-style executive pattern -->
+  <g opacity="0.04">
+    <text x="50" y="300" font-family="Georgia, serif" font-size="120" font-style="italic" fill="#64748b" transform="rotate(-30 50 300)">Executive</text>
+    <text x="400" y="400" font-family="Georgia, serif" font-size="100" font-style="italic" fill="#64748b" transform="rotate(25 400 400)">Strategy</text>
+  </g>
+</svg>

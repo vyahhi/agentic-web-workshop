@@ -11,8 +11,23 @@ body {
     font-family: 'Inter', sans-serif;
     line-height: 1.6;
     color: #2c3e50;
-    background-color: #ffffff;
+    background: linear-gradient(135deg, #fafafa 0%, #f5f5f4 100%),
+                url('paper-texture.svg') repeat;
+    background-blend-mode: overlay;
     font-weight: 400;
+    position: relative;
+}
+
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="subtle" width="8" height="8" patternUnits="userSpaceOnUse"><path d="M 8 0 L 0 0 0 8" fill="none" stroke="rgba(100,116,139,0.03)" stroke-width="0.5"/></pattern></defs><rect width="100" height="100" fill="url(%23subtle)"/></svg>');
+    pointer-events: none;
+    z-index: 1;
 }
 
 h1, h2, h3, h4 {
@@ -183,10 +198,29 @@ p {
 /* Common section styles */
 section {
     padding: 80px 0;
+    position: relative;
+    z-index: 2;
 }
 
-section:nth-child(even) {
-    background: #f8fafc;
+/* Section-specific backgrounds - more distinctive */
+section.overview {
+    background: rgba(255, 255, 255, 0.5);
+    border-bottom: 1px solid rgba(200, 200, 200, 0.1);
+}
+
+section.impact {
+    background: rgba(230, 244, 255, 0.7);
+    border-bottom: 1px solid rgba(100, 150, 255, 0.15);
+}
+
+section.audience {
+    background: rgba(255, 248, 230, 0.7);
+    border-bottom: 1px solid rgba(255, 200, 100, 0.15);
+}
+
+section.urgency {
+    background: rgba(235, 230, 255, 0.8);
+    border-bottom: 1px solid rgba(150, 100, 255, 0.2);
 }
 
 .section-header {
@@ -227,7 +261,7 @@ section:nth-child(even) {
 }
 
 .concept {
-    background: #ffffff;
+    background: rgba(255, 255, 255, 0.95);
     padding: 2.5rem;
     border-radius: 12px;
     box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
