@@ -135,6 +135,17 @@ p {
     color: #ffffff;
 }
 
+.schedule-link {
+    color: #ffffff;
+    text-decoration: none;
+    padding-left: 0.5rem;
+    transition: color 0.2s ease;
+}
+
+.schedule-link:hover {
+    color: #63b3ed;
+}
+
 .hero-description {
     font-family: 'Inter', sans-serif;
     font-size: 1.125rem;
