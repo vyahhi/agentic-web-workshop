@@ -136,14 +136,13 @@ p {
 }
 
 .schedule-link {
-    color: #ffffff;
-    text-decoration: none;
-    padding-left: 0.5rem;
+    color: #f1f5f9;
+    text-decoration: underline;
     transition: color 0.2s ease;
 }
 
 .schedule-link:hover {
-    color: #63b3ed;
+    color: #ffffff;
 }
 
 .hero-description {
