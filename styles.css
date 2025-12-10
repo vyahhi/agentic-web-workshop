@@ -113,7 +113,7 @@ p {
 
 .schedule-item {
     color: #e2e8f0;
-    padding: 0.25rem 0;
+    padding: 0.25rem 0.2rem;
     font-size: 1rem;
     font-family: 'Inter', sans-serif;
     font-weight: 400;
