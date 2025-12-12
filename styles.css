@@ -591,6 +591,46 @@ section.urgency {
     background: #f8fafc;
 }
 
+/* Support Section */
+.support {
+    background: rgba(240, 248, 255, 0.6);
+    border-bottom: 1px solid rgba(100, 150, 255, 0.15);
+}
+
+.support-highlights {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.support-feature {
+    background: #ffffff;
+    padding: 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #2c5282;
+    transition: all 0.2s ease;
+}
+
+.support-feature:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+    transform: translateY(-2px);
+}
+
+.support-feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #1a252f;
+    font-weight: 600;
+}
+
+.support-feature p {
+    color: #4a5568;
+    line-height: 1.6;
+    margin-bottom: 0;
+}
+
 .urgency .quote-container blockquote {
     color: #1a252f !important;
     font-size: 1.75rem;
